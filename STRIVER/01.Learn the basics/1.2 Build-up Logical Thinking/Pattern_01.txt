@@ -1,0 +1,13 @@
+Q:https://practice.geeksforgeeks.org/problems/square-pattern/1
+
+class Solution {
+    
+    void printSquare(int n) {
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
