@@ -1,5 +1,14 @@
 Q:https://practice.geeksforgeeks.org/problems/square-pattern/1
 
+Input: 5
+
+Output:
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
 class Solution {
     
     void printSquare(int n) {
