@@ -1,0 +1,23 @@
+Q:https://practice.geeksforgeeks.org/problems/armstrong-numbers2727/1
+
+Input: N = 153
+Output: "Yes"
+
+class Solution {
+    static String armstrongNumber(int n){
+        int no = n;
+        int sum = 0;
+        
+        while(no > 0){
+            int digit = no % 10;
+            sum += Math.pow(digit,3);
+            no /= 10;
+        }
+        
+        if(sum == n){
+            return "Yes";
+        } else {
+            return "No";
+        }
+    }
+}

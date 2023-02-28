@@ -1,0 +1,38 @@
+Q:https://practice.geeksforgeeks.org/problems/print-first-n-fibonacci-numbers1002/1
+
+Input:
+N = 5
+Output: 1 1 2 3 5
+
+class Solution {
+    public static long[] printFibb(int n) {
+        if(n == 1) {
+            return new long[]{1};
+        }
+        long[] ans = new long[n];
+        fibo(ans, n-1);
+        return ans;
+    }
+    
+    public static void fibo(long[] ans, int n) {
+        if(n <= 1) {
+            ans[0] = 1;
+            ans[1] = 1;
+            return;
+        }
+        
+        fibo(ans, n - 1);
+        ans[n] = ans[n - 1] + ans[n - 2];
+        return;
+    }
+}
+
+
+// Single Fibo No
+public static long fibo(int n){
+    if(n <= 1){
+        return n;
+    }
+    
+    return fibo(n - 1) + fibo(n - 2);
+}

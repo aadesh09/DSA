@@ -1,0 +1,19 @@
+
+Input :
+"abccba"
+Output :
+true
+
+Class Solution {
+    public void isPalindrome(int i, String s){
+        if(i >= s.size/2){
+            return true;
+        }
+
+        if(s.charAt(i) != s.charAt(s.length() - i -1)){
+            return false;
+        }
+
+        return isPalindrome(i + 1, s);
+    }
+}

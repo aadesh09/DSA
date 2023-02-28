@@ -1,0 +1,26 @@
+Q:https://practice.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1
+
+Input:
+N=5
+Output:
+225
+Explanation:
+13+23+33+43+53=225
+
+class Solution {
+    long sumOfSeries(long N) {
+        if(N <= 0){
+            return 0;
+        }
+        
+        return (long) Math.pow(N, 3) + sumOfSeries(N - 1);
+    }
+}
+
+class Solution {
+    long sumOfSeries(long N) {
+        //using formula : The Formula is ((N*(N+1)/2)^2
+        long ans = (N * N * (N + 1) * (N + 1)) / 4;
+        return ans;
+    }
+}

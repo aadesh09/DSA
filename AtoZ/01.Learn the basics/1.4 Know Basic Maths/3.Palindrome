@@ -1,0 +1,26 @@
+Q:https://practice.geeksforgeeks.org/problems/palindrome0746/1
+
+Input: n = 55555
+Output: Yes
+
+class Solution
+{
+    public String is_palindrome(int n)
+    {
+        int reverse = 0;
+        int no = n;
+        
+        while(no != 0){
+            int digit = no % 10;
+            reverse = reverse * 10 + digit;
+            no /= 10;
+        }
+        
+        if(reverse == n){
+            return "Yes";
+        } else {
+            return "No";
+        }
+        
+    }
+}

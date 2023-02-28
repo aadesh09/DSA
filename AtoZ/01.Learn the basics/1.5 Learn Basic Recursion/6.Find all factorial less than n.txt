@@ -1,0 +1,52 @@
+Q:https://practice.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3548/0
+
+Input: N = 3
+Output: 1 2
+Explanation: The first factorial number is 1 which is less than equal to N. The second 
+number is 2 which is less than equal to N, but the third factorial number is 6 which 
+is greater than N. So we print only 1 and 2.
+
+class Solution{
+    static ArrayList<Long> factorialNumbers(long N){
+        ArrayList<Long> ans = new ArrayList<Long>();
+        
+        for(int i = 1; i <= N; i++){
+            long fact = factorial(i);
+            if(fact <= N) {
+                ans.add(fact);
+            } else {
+                break;
+            }
+        }
+        
+        return ans;
+    }
+    
+    static long factorial(long N) {
+        if(N <= 0){
+            return 1;
+        }
+        
+        return N * factorial(N - 1);
+    }
+}
+
+class Solution{
+    static ArrayList<Long> factorialNumbers(long N){
+        ArrayList<Long> ans = new ArrayList<Long>();
+        long fact = 1;
+        for(int i = 1; i <= N; i++){
+            fact *= i;
+            if(fact <= N) {
+                ans.add(fact);
+            } else {
+                break;
+            }
+        }
+        
+        return ans;
+    }
+}
+
+
+
